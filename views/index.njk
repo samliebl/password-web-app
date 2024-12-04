@@ -1,0 +1,15 @@
+{% extends "_layouts/base.njk" %}
+{% block content %}
+  <h1>Welcome to Password Web App</h1>
+  <p>
+    This is a secure application. 
+    <a href="/protected/login">Login here</a> to access protected content.
+  </p>
+  <script>
+    // Check for the 'loggedOut' query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('loggedOut')) {
+      alert('You have successfully logged out.');
+    }
+  </script>
+{% endblock %}

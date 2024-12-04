@@ -1,0 +1,19 @@
+{% extends "_layouts/base.njk" %}
+{% block content %}
+  <h1>Login</h1>
+  <form action="/protected/login" method="POST">
+    <label>
+      Name:
+      <input type="text" name="name" required />
+      <small>Alphanumeric, max 16 characters.</small>
+    </label>
+    <br />
+    <label>
+      Password:
+      <input type="password" name="password" required />
+    </label>
+    <br />
+    <button type="submit">Login</button>
+    <p style="color: red;">{{ error }}</p>
+  </form>
+{% endblock %}

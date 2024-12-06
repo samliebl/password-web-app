@@ -2,3 +2,4 @@ user_login.json
 .env
 node_modules/
 .DS_Store
+nodemon.json
